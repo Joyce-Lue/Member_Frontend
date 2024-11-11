@@ -1,0 +1,96 @@
+.horizontally{
+    display: flex;
+}
+
+.horizontallyCenter{
+    display: flex;
+    justify-content: center;
+}
+
+.cartLine {
+    flex: 1;
+    height: 3px;
+    background-color: #ccc;
+}
+
+/* 當選擇登入或註冊時，對應的分隔線透明 */
+.cartLine {
+    flex: 1;
+    height: 3px;
+    background-color: #ccc;
+    transition: opacity 0.3s ease;
+}
+
+.cartLine.inactive {
+    opacity: 0.2;
+}
+
+.cartLine.active {
+    opacity: 1;
+}
+
+.noBullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* 註冊、登入 */
+.cartLoginHeader{
+    margin-left: 5%;
+    margin-right: 5%;
+    cursor: pointer;
+}
+
+.cartLoginLi{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+/* 當登入被選擇時，註冊區塊變透明 */
+.cartLoginLi.inactive {
+    opacity: 0.3;
+}
+
+/* 當註冊被選擇時，登入區塊變透明 */
+.cartLoginLi.active {
+    opacity: 1;
+}
+
+.cartLoginMargin{
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+
+/* 樣式 */
+h2.cartLoginHeader {
+    font-size: 2em;
+}
+
+div.horizontallyCenter input{
+    padding: 10px;
+}
+
+div.horizontallyCenter button {
+    font-size: larger;
+    cursor: pointer;
+    background-color:  #4ba2c2;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    height: 50px;
+    width: 200px;
+} 
+
+div.horizontallyCenter button:hover {
+    background-color: rgba(10, 172, 221, 0.7);
+} 
+
+span.forget{
+    text-decoration: underline;
+}
