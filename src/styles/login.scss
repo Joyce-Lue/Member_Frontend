@@ -1,0 +1,100 @@
+@mixin opacity($number) {
+  opacity: $number;
+}
+
+div {
+  ul.noBullets {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  ul.horizontally {
+    display: flex;
+    li.Line {
+      flex: 1;
+      height: 3px;
+      background-color: #ccc;
+    }
+  }
+  ul.horizontallyCenter {
+    display: flex;
+    justify-content: center;
+    li.LoginLi {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      transition: opacity 0.3s ease;
+    }
+    h2.LoginHeader {
+      font-size: 2em;
+      margin-left: 5%;
+      margin-right: 5%;
+      cursor: pointer;
+    }
+  }
+}
+
+/* 當選擇登入或註冊時，對應的分隔線透明 */
+.Line.inactive {
+  @include opacity(0.2);
+}
+
+.Line.active {
+  @include opacity(1);
+}
+
+.LoginLi.inactive {
+  @include opacity(0.3);
+}
+
+.LoginLi.active {
+  @include opacity(1);
+}
+// ==============================
+
+div.LoginMargin {
+  margin-top: 10px;
+  margin-bottom: 25px;
+  input {
+    padding: 10px;
+  }
+  a {
+    span.forget {
+      text-decoration: underline;
+    }
+  }
+}
+
+// div.horizontallyCenter button {
+//   font-size: larger;
+//   cursor: pointer;
+//   background-color: #4ba2c2;
+//   color: white;
+//   padding: 5px;
+//   border: none;
+//   border-radius: 20px;
+//   height: 50px;
+//   width: 200px;
+//   &:hover {
+//     background-color: rgba(10, 172, 221, 0.7);
+//   }
+// }
+
+div.horizontallyCenter {
+  display: flex;
+  justify-content: center;
+  button {
+    font-size: larger;
+    cursor: pointer;
+    background-color: #4ba2c2;
+    color: white;
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    height: 50px;
+    width: 200px;
+    &:hover {
+      background-color: rgba(10, 172, 221, 0.7);
+    }
+  }
+}

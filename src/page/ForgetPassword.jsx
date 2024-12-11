@@ -29,7 +29,7 @@ const ForgetPassword = () => {
       {/* <header /> */}
 
       <div className="container">
-        <div className="forgetContainer2">
+        <div className="forgetContainer">
           <div className="forgetRight forgetRight1">
             <h1>忘記密碼 ?</h1>
           </div>

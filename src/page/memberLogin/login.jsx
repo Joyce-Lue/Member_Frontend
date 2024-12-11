@@ -60,23 +60,23 @@ const Login = () => {
         <div>
           <ul className="noBullets horizontallyCenter">
             <li
-              className={`cartLoginLi ${state ? "active" : "inactive"}`}
+              className={`LoginLi ${state ? "active" : "inactive"}`}
               onClick={goLogin}
             >
-              <h2 className="cartLoginHeader">會員登入</h2>
+              <h2 className="LoginHeader">會員登入</h2>
             </li>
             <li
-              className={`cartLoginLi ${!state ? "active" : "inactive"}`}
+              className={`LoginLi ${!state ? "active" : "inactive"}`}
               onClick={goRegister}
             >
-              <h2 className="cartLoginHeader">註冊</h2>
+              <h2 className="LoginHeader">註冊</h2>
             </li>
           </ul>
         </div>
         <div>
           <ul className="noBullets horizontally">
-            <li className={`cartLine ${state ? "active" : "inactive"}`}></li>
-            <li className={`cartLine ${!state ? "active" : "inactive"}`}></li>
+            <li className={`Line ${state ? "active" : "inactive"}`}></li>
+            <li className={`Line ${!state ? "active" : "inactive"}`}></li>
           </ul>
         </div>
 
@@ -86,11 +86,11 @@ const Login = () => {
             {error && (
               <p style={{ color: "red", textAlign: "center" }}>{error}</p>
             )}
-            <div className="horizontallyCenter cartLoginMargin">
+            <div className="horizontallyCenter LoginMargin">
               <p>歡迎回來。登入並繼續瀏覽頁面。</p>
             </div>
             <form onSubmit={(e) => handleSubmit(e, true)} method="POST">
-              <div className="horizontallyCenter cartLoginMargin">
+              <div className="horizontallyCenter LoginMargin">
                 <input
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -100,7 +100,7 @@ const Login = () => {
                   required
                 />
               </div>
-              <div className="horizontallyCenter cartLoginMargin">
+              <div className="horizontallyCenter LoginMargin">
                 <input
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
@@ -110,12 +110,12 @@ const Login = () => {
                   required
                 />
               </div>
-              <div className="horizontallyCenter cartLoginMargin">
+              <div className="horizontallyCenter LoginMargin">
                 <Link to="/ForgetPassword">
                   <span className="forget">忘記密碼?</span>
                 </Link>
               </div>
-              <div className="horizontallyCenter cartLoginMargin">
+              <div className="horizontallyCenter LoginMargin">
                 <input type="checkbox" id="loginRember" />
                 <label htmlFor="loginRember">記住我(選填)</label>
               </div>
@@ -132,14 +132,12 @@ const Login = () => {
             {error && (
               <p style={{ color: "red", textAlign: "center" }}>{error}</p>
             )}
-            <div className="cartLoginMargin">
-              <p className="horizontallyCenter">
-                註冊會員。將收到活動訊息並享有優惠!
-              </p>
+            <div className="LoginMargin horizontallyCenter">
+              <p>註冊會員。將收到活動訊息並享有優惠!</p>
             </div>
             <form onSubmit={(e) => handleSubmit(e, false)} method="POST">
               {/* 姓名 */}
-              <div className="horizontallyCenter cartLoginMargin">
+              <div className="horizontallyCenter  LoginMargin">
                 <input
                   name="userName"
                   value={userName}
@@ -150,7 +148,7 @@ const Login = () => {
                 />
               </div>
               {/* 電子郵件 */}
-              <div className="horizontallyCenter cartLoginMargin">
+              <div className="horizontallyCenter LoginMargin">
                 <input
                   name="email"
                   value={email}
@@ -162,7 +160,7 @@ const Login = () => {
               </div>
 
               {/* 密碼 */}
-              <div className="horizontallyCenter cartLoginMargin">
+              <div className="horizontallyCenter LoginMargin">
                 <input
                   name="password"
                   value={password}
@@ -172,14 +170,14 @@ const Login = () => {
                   required
                 />
               </div>
-              <div className="horizontallyCenter cartLoginMargin">
+              <div className="horizontallyCenter LoginMargin">
                 <input type="checkbox" id="loginRember" required />
                 <label htmlFor="loginRember">
                   本人已年滿18歲並以閱讀且同意 <br />{" "}
                   IRISEL公司的條款細則和隱私權政策 。
                 </label>
               </div>
-              <div className="horizontallyCenter cartLoginMargin">
+              <div className="horizontallyCenter LoginMargin">
                 <button>註冊</button>
               </div>
             </form>
