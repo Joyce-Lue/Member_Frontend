@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 
-import "./styles/memberALL.css";
+import "./styles/memberAll.css";
 
 import Member from "./page/member";
 import Login from "./page/memberLogin/login.jsx";

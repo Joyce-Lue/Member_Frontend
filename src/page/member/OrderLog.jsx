@@ -47,7 +47,7 @@ const OrderLog = () => {
 
         {/* 有訂單紀錄 */}
         {orderLog === 1 && firstOrder && (
-          <div className="OrderLog2Right2">
+          <div className="orderLog2">
             <p>
               訂購日期:
               {new Date(firstOrder.orderDate).toLocaleDateString("zh-TW")}

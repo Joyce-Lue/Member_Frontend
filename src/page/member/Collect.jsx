@@ -91,7 +91,7 @@ const Collect = () => {
 
         {/* 有收藏紀錄 */}
         {collect === 1 && (
-          <div className="Collect2Right2">
+          <div className="collect2">
             {userCollect.map((collect) => (
               <div className="bottom" key={collect.collectID}>
                 <div className="info">

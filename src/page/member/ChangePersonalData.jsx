@@ -161,7 +161,7 @@ const ChangePersonalData = ({ setPage }) => {
             {/* <!-- 按鈕 --> */}
             <br />
             <span onClick={() => setPage(1)}>回上頁</span>
-            <button>更新</button>
+            <button>送出</button>
           </form>
         </div>
       </div>

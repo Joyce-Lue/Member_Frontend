@@ -1,568 +1,478 @@
+@charset "UTF-8";
 /* ======================= ALL =======================*/
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 div.container {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    width: 100vw;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100vw;
 }
+
 div.container2 {
-    width: 18vw;
+  width: 18vw;
 }
+
 div.container3 {
-    width: 32vw;
+  width: 32vw;
 }
 
-
-@media screen and (max-width:1310px) {
-
-    .aside1,
-    .aside2 {
-        justify-content: start;
-        margin: 30px 10px;
-    }
-
-
-    .aside3 {
-        margin: 10px 15px 10px 0px;
-    }
-
-    div.container2 {
-        width: 30vw;
-    }
-
-    div.container3 {
-        width: 60vw;
-    }
-
+@media screen and (max-width: 1310px) {
+  .aside1,
+  .aside2 {
+    justify-content: start;
+    margin: 30px 10px;
+  }
+  .aside3 {
+    margin: 10px 15px 10px 0px;
+  }
+  div.container2 {
+    width: 30vw;
+  }
+  div.container3 {
+    width: 60vw;
+  }
 }
-
-/* ======================= MemberList ======================= */
-.aside1,
-.aside2 {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    margin: 30px 50px;
+div div.aside1 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 30px 50px;
 }
-.aside3 {
-    margin: 10px 50px;
-    padding: 10px 0 10px 10px;
-    display: inline-block;
-    border: 1px solid black;
+div div.aside1 p {
+  padding: 10px 0;
+  cursor: pointer;
 }
-
-.aside1 p{
-    padding: 10px 0;
-    cursor: pointer;
+div div.aside1 p:last-child {
+  text-decoration: underline;
+  position: relative;
 }
-
+div div.aside2 {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: 30px 50px;
+}
+div div.aside2 p {
+  padding: 10px 0;
+  cursor: pointer;
+}
+div div.aside3 {
+  margin: 10px 50px;
+  padding: 10px 0 10px 10px;
+  display: inline-block;
+  border: 1px solid black;
+}
 
 .style {
-    transition: opacity 0.3s ease;
-  }
-  
-.style.active {
-    opacity: 1; 
-  }
-  
-.style.inactive {
-    opacity: 0.3;
-  }
-
-.aside1 p:last-child {
-    text-decoration: underline;
-    position: relative;
+  transition: opacity 0.3s ease;
 }
 
-.aside2 p{
-    padding: 10px 0;
-    cursor: pointer;
+.style.active {
+  opacity: 1;
+}
+
+.style.inactive {
+  opacity: 0.3;
 }
 
 p.style:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 /* Account */
-.AccountRight1,
-.AccountRight2 {
-    margin: 20px 0px 20px 0;
-    padding: 10px 0;
+div div.AccountRight1 {
+  margin: 20px 0px 20px 0;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+  margin-bottom: 0;
+}
+div div.AccountRight2 {
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+div div.AccountRight2 p {
+  margin-bottom: 15px;
+}
+div div.AccountRight2 div.AccountBox {
+  position: relative;
+}
+div div.AccountRight2 div.AccountBox label {
+  position: absolute;
+  right: 100px;
+  bottom: 0;
 }
 
-.AccountRight1 {
-    border-bottom: 1px solid black;
-    margin-bottom: 0;
-}
-
-.AccountRight2 {
-    margin-top: 0;
-}
-
-.AccountRight2 p {
-    margin-bottom: 15px;
-}
-
-div.AccountBox {
-    position: relative;
-}
-
-div.AccountBox label {
+@media screen and (max-width: 700px) {
+  div.AccountBox label {
     position: absolute;
-    right: 100px;
+    right: 80px;
     bottom: 0;
-
+  }
+}
+/* Settings */
+div div.SettingsRight {
+  margin: 20px 0px 20px 0;
+  padding: 10px 0;
+  position: relative;
+}
+div div.SettingsRight span.setPage {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin-top: 10px;
+  cursor: pointer;
+}
+div div.SettingsRight div.SettingsBox {
+  position: relative;
+}
+div div.SettingsRight div.SettingsBox p {
+  margin-top: 15px;
+}
+div div.SettingsRight div.SettingsBox button {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+div div.SettingsRight label {
+  position: absolute;
+  right: 200px;
+  bottom: 0;
 }
 
-@media screen and (max-width:700px) {
-    div.AccountBox label {
-        position: absolute;
-        right: 80px;
-        bottom: 0;
-    }
+div.SettingsRight1 {
+  border-bottom: 1px solid black;
+  margin-bottom: 0;
 }
 
-/* ======================= Settings ======================= */
-.SettingsRight {
-    margin: 20px 0px 20px 0;
-    padding: 10px 0;
-    position: relative;
+div.SettingsRight2 {
+  margin-top: 0;
+}
+div.SettingsRight2 p {
+  padding-top: 10px;
 }
 
-.SettingsRight1 {
-    border-bottom: 1px solid black;
-    margin-bottom: 0;
+div.SettingsRight3 {
+  border-top: 1px solid black;
+}
+div.SettingsRight3 p {
+  padding-top: 10px;
 }
 
-.SettingsRight2 {
-    margin-top: 0;
+div.SettingsRight4 {
+  border-top: 1px solid black;
 }
-
-.SettingsRight3,
-.SettingsRight4 {
-    border-top: 1px solid black;
-}
-
-.SettingsRight2 p,
-.SettingsRight3 p {
-    padding-top: 10px;
-}
-
-.setPage {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin-top: 10px;
-    cursor: pointer;
-}
-
-div.SettingsBox {
-    position: relative;
-}
-
-.SettingsRight4 div.SettingsBox p {
-    margin-top: 15px;
-}
-
-div.SettingsBox button {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-div.SettingsBox label {
-    position: absolute;
-    right: 200px;
-    bottom: 0;
-}
-
 
 /* 按鈕樣式 */
 .toggle-button {
-    background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 10px;
-    /* margin: 5px; */
-    cursor: pointer;
-    font-size: 16px;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-  }
-  
-  .toggle-button.active {
-    background-color: #4ba2c2;
-    color: white;
-  }
-  
-  .toggle-button.inactive {
-    background-color: #ccc;
-    color: #777;
-  }
-  
-  .toggle-button:hover {
-    background-color: #e0e0e0;
-  }
- 
-
-@media screen and (max-width:700px) {
-    div.SettingsBox label {
-        position: absolute;
-        right: 80px;
-        bottom: 0;
-    }
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
-/* ======================= Address =======================  */
-.AddressRight1 {
-    margin-top: 20px;
-    padding: 10px 0;
-    border-bottom: 1px solid black;
+.toggle-button.active {
+  background-color: #4ba2c2;
+  color: white;
 }
 
-.AddressRight2 form input {
-    padding: 10px;
-    margin-top: 20px;
+.toggle-button.inactive {
+  background-color: #ccc;
+  color: #777;
 }
 
-.AddressRight2 form button {
-    padding: 10px;
-    margin-top: 20px;
-    font-size: x-large;
-    cursor: pointer;
-    background-color:  #4ba2c2;
-    color: white;
-    border: none;
-    border-radius: 10px;
+.toggle-button:hover {
+  background-color: #e0e0e0;
 }
 
-.AddressRight2 form button:hover {
-    border: 2px solid black;
-}
-
-/* ======================= OrderLog =======================  */
-.OrderLogRight {
-    margin: 20px 0px 20px 0;
-    padding: 10px 0;
-}
-
-.OrderLogRight1 {
-    border-bottom: 1px solid black;
-    margin-bottom: 0;
-}
-
-.OrderLogRight2 p {
-    margin-bottom: 30px;
-}
-
-
-.OrderLogRight2 a {
-    font-size: x-large;
-    background-color: black;
-    color: aliceblue;
-    padding: 10px;
-}
-
-.OrderLog2Right1 {
-    margin-top: 20px;
-    padding: 10px 0;
-    border-bottom: 1px solid black;
-}
-
-.OrderLog2Right2 {
-    margin-top: 15px;
-}
-
-.OrderLog2Right2>p:first-child {
-    margin-bottom: 10px;
-}
-
-.OrderLog2Right2 .top {
-    display: flex;
-    position: relative;
-}
-
-.OrderLog2Right2 .top p:last-child {
+@media screen and (max-width: 700px) {
+  div.SettingsBox label {
     position: absolute;
-    right: 0;
-}
-
-.OrderLog2Right2 .bottom {
-    margin: 20px 0;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-}
-
-.OrderLog2Right2 .bottom .info {
-    flex: 1 0 150px;
-}
-
-.OrderLog2Right2 .bottom .info img{
-    flex: 1;
-    max-width: 60%;
-    height: auto;
-}
-
-.OrderLog2Right2 .bottom .info1 {
-    flex: 1 0 300px;
-}
-
-.OrderLog2Right2 .bottom .info2 {
-    flex: 1 0 200px;
-    position: absolute;
-    right: 0;
-}
-
-/* ======================= Collect =======================  */
-.collectRight1 {
-    margin: 20px 0px 20px 0;
-    padding: 10px 0;
-    border-bottom: 1px solid black;
-    margin-bottom: 0;
-}
-
-.collectRight2 {
-    margin-bottom: 20px;
-    padding: 10px 0;
-}
-
-.collectRight2 p {
-    margin: 15px 0 30px 0;
-}
-
-/* 繼續購物按鈕 */
-.collectRight2 a {
-    font-size: x-large;
-    background-color:  #4ba2c2;
-    color: white;
-    padding: 10px;
-    transition: all 0.1s ease;
-    border-radius: 10px;
-}
-
-.collectRight2 a:hover {
-    border: 2px solid black;
-    background-color: #368b99; 
-    transform: scale(1.1); 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.Collect2Right1 {
-    margin-top: 20px;
-    padding: 10px 0;
-    border-bottom: 1px solid black;
-}
-
-
-.Collect2Right2 {
-    margin-top: 15px;
-}
-
-.Collect2Right2 p {
-    margin-bottom: 15px;
-}
-
-.Collect2Right2 div.bottom {
-    margin: 40px 0;
-    display: flex;
-    position: relative;
-    justify-content: space-between;
-    border-bottom: 1px solid black;
-}
-
-.Collect2Right2 .bottom .info {
-    flex: 1 0 150px;
-}
-
-.Collect2Right2 .bottom .info img{
-    flex: 1;
-    max-width: 60%;
-    height: auto;
-}
-
-.Collect2Right2 .bottom .info1 {
-    flex: 2 0 150px;
-}
-
-.Collect2Right2 .bottom .info2 {
-    flex: 1 0 150px;
-    position: absolute;
-    right: 0;
-}
-
-p.add {
-    font-size: large;
-    background-color:  #4ba2c2;
-    color: white;
-    padding: 10px;
-    display: inline-block;
-    margin: 0 10px 15px 0;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-p.add:hover {
-    border: 2px solid black;
-}
-
-p.delete:hover {
-    text-decoration: underline;
-    cursor: pointer;
-}
-
-@media screen and (max-width:770px) {
-    .Collect2Right2 .bottom .info1 {
-        display: inline;
-        box-sizing: content-box;
-    }
-}
-
-/* ======================= ChangeAccountData =======================  */
-.CADRight {
-    margin: 20px 0px 20px 0;
-    padding: 10px 0;
-    position: relative;
-}
-
-
-.CADRight2 p {
-    padding-top: 10px;
-}
-
-.CADRight2 span {
-    position: absolute;
-    right: 0;
-    top: 20px;
-    z-index: 3;
-    cursor: pointer;
-}
-
-
-div.CADBox {
-    position: relative;
-    border-bottom: 1px solid black;
-}
-
-div.CADBox select {
-    position: absolute;
-    right: 0;
-    top: 0;
-}
-
-div.CADBox label {
-    position: absolute;
-    right: 200px;
+    right: 80px;
     bottom: 0;
+  }
+}
+/* Address */
+div div.AddressRight1 {
+  margin-top: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+}
+div div.AddressRight2 form input {
+  padding: 10px;
+  margin-top: 20px;
+}
+div div.AddressRight2 form button {
+  padding: 10px;
+  margin-top: 20px;
+  font-size: x-large;
+  cursor: pointer;
+  background-color: #4ba2c2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+div div.AddressRight2 form button:hover {
+  border: 2px solid black;
 }
 
-span.goBack{
-    border: none;
-    background-color:  #6d6e6d;
-    color: white;
-    padding: 10px 28px;
-    cursor: pointer;
-    border-radius: 10px;
+/* OrderLog */
+div div.OrderLogRight {
+  margin: 20px 0px 20px 0;
+  padding: 10px 0;
+}
+div div.OrderLogRight1 {
+  border-bottom: 1px solid black;
+  margin-bottom: 0;
+}
+div div.OrderLogRight2 p {
+  margin-bottom: 30px;
+}
+div div.OrderLogRight2 a {
+  font-size: x-large;
+  background-color: black;
+  color: aliceblue;
+  padding: 10px;
+}
+div div.orderLog2 {
+  margin-top: 15px;
+}
+div div.orderLog2 > p:first-child {
+  margin-bottom: 10px;
+}
+div div.orderLog2 div.top {
+  display: flex;
+  position: relative;
+}
+div div.orderLog2 div.top > p:last-child {
+  position: absolute;
+  right: 0;
+}
+div div.orderLog2 div.bottom {
+  margin: 20px 0;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+div div.orderLog2 div.bottom div.info {
+  flex: 1 0 150px;
+}
+div div.orderLog2 div.bottom div.info img {
+  flex: 1;
+  max-width: 60%;
+  height: auto;
+}
+div div.orderLog2 div.bottom div.info1 {
+  flex: 1 0 300px;
+}
+div div.orderLog2 div.bottom div.info2 {
+  flex: 1 0 200px;
+  position: absolute;
+  right: 0;
 }
 
-span.goBack:hover {
-    border: 2px solid black;
+/* Collect */
+div div.collectRight1 {
+  margin-top: 20px;
+  padding: 10px 0;
+  border-bottom: 1px solid black;
+}
+div div.collectRight2 {
+  margin-bottom: 20px;
+  padding: 10px 0;
+}
+div div.collectRight2 p {
+  margin: 15px 0 30px 0;
+}
+div div.collectRight2 a {
+  font-size: x-large;
+  background-color: #4ba2c2;
+  color: white;
+  padding: 10px;
+  transition: all 0.1s ease;
+  border-radius: 10px;
+}
+div div.collectRight2 a:hover {
+  border: 2px solid black;
+  background-color: #368b99;
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+div div.collect2 {
+  margin-top: 15px;
+}
+div div.collect2 p {
+  margin-bottom: 15px;
+}
+div div.collect2 div.bottom {
+  margin: 40px 0;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  border-bottom: 1px solid black;
+}
+div div.collect2 div.bottom div.info {
+  flex: 1 0 150px;
+}
+div div.collect2 div.bottom div.info img {
+  flex: 1;
+  max-width: 60%;
+  height: auto;
+}
+div div.collect2 div.bottom div.info1 {
+  flex: 2 0 150px;
+}
+div div.collect2 div.bottom div.info2 {
+  flex: 1 0 150px;
+  position: absolute;
+  right: 0;
+}
+div div.collect2 div.bottom div.info2 p.add {
+  font-size: large;
+  background-color: #4ba2c2;
+  color: white;
+  padding: 10px;
+  display: inline-block;
+  margin: 0 10px 15px 0;
+  cursor: pointer;
+  border-radius: 10px;
+}
+div div.collect2 div.bottom div.info2 p.add:hover {
+  border: 2px solid black;
+}
+div div.collect2 div.bottom div.info2 p.delete:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
-@media screen and (max-width:700px) {
-    div.CADBox label {
-        position: absolute;
-        right: 80px;
-        bottom: 0;
-    }
+@media screen and (max-width: 770px) {
+  .collect2 .bottom .info1 {
+    display: inline;
+    box-sizing: content-box;
+  }
+}
+/* ChangeAccountData */
+div div.CADRight {
+  margin: 20px 0px 20px 0;
+  padding: 10px 0;
+  position: relative;
+}
+div div.CADRight p {
+  padding-top: 10px;
+}
+div div.CADRight span {
+  position: absolute;
+  right: 0;
+  top: 20px;
+  z-index: 3;
+  cursor: pointer;
+}
+div div.CADRight div.CADBox {
+  position: relative;
+  border-bottom: 1px solid black;
+}
+div div.CADRight div.CADBox label {
+  position: absolute;
+  right: 200px;
+  bottom: 0;
+}
+div span.goBack {
+  border: none;
+  background-color: #6d6e6d;
+  color: white;
+  padding: 10px 28px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+div span.goBack:hover {
+  border: 2px solid black;
 }
 
-/* ======================= ChangePersonalData =======================  */
-.changeRight1 {
-    margin-top: 20px;
-    padding: 10px 0;
-    text-align: center;
-    border-bottom: 1px solid black;
+@media screen and (max-width: 700px) {
+  div.CADBox label {
+    position: absolute;
+    right: 80px;
+    bottom: 0;
+  }
+}
+/* ChangePersonalData */
+div div.changeRight1 {
+  margin-top: 20px;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+div div.changeRight2 {
+  text-align: center;
+}
+div div.changeRight2 form input {
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 6px;
+}
+div div.changeRight2 form select {
+  padding: 10px;
+  margin-top: 15px;
+  margin-left: 6px;
+}
+div div.changeRight2 form label {
+  display: inline-block;
+  margin-top: 15px;
+}
+div div.changeRight2 form span {
+  padding: 13px;
+  font-size: large;
+  cursor: pointer;
+  background-color: #6d6e6d;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+div div.changeRight2 form span:hover {
+  border: 2px solid black;
+}
+div div.changeRight2 form button {
+  padding: 10px 20px;
+  margin: 20px 0 0 6px;
+  font-size: large;
+  cursor: pointer;
+  background-color: #4ba2c2;
+  color: white;
+  border: none;
+  border-radius: 10px;
+}
+div div.changeRight2 form button:hover {
+  border: 2px solid black;
 }
 
-.changeRight2 {
-    text-align: center;
+/* Change的Email、Phone、Password */
+div.aButton {
+  text-align: center;
+  margin: 5px 0 15px 0;
 }
-
-.changeRight2 form input,
-.changeRight2 form select {
-    padding: 10px;
-    margin-top: 15px;
-    margin-left: 6px;
+div.aButton span {
+  display: inline-block;
+  border: 1px outset black;
+  padding: 10px 20px;
+  margin-right: 10px;
+  background-color: rgb(240, 240, 240);
+  cursor: pointer;
 }
-
-.changeRight2 form label {
-    display: inline-block;
-    margin-top: 15px;
-}
-
-.changeRight2 form span {
-    padding: 13px;
-    font-size: large;
-    cursor: pointer;
-    background-color:  #6d6e6d;
-    color: white;
-    border: none;
-    border-radius: 10px;
-}
-
-.changeRight2 form span:hover {
-    border: 2px solid black;
-}
-
-.changeRight2 form button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    font-size: large;
-    cursor: pointer;
-    margin-left: 6px;
-    background-color:  #4ba2c2;
-    color: white;
-    border: none;
-    border-radius: 10px;
-}
-
-.changeRight2 form button:hover {
-    border: 2px solid black;
-}
-
-/* ======================= Change的Email、Phone、Password =======================  */
-.aButton{
-    text-align: center;
-    margin: 5px 0 15px 0;
-}
-
-.aButton span {
-    display: inline-block;
-    border: 1px outset black;
-    padding: 10px 20px;
-    margin-right: 10px;
-    background-color: rgb(240, 240, 240);
-    cursor: pointer;
-}
-
-.aButton button {
-    display: inline-block;
-    text-align: center;
-    cursor: pointer;
-    padding: 10px 20px;
-}
-
-a.forget {
-    text-decoration: underline;
+div.aButton button {
+  display: inline-block;
+  text-align: center;
+  padding: 10px 20px;
 }
 
 p.hint {
-    margin-top: 10px;
-}
+  margin-top: 10px;
+}/*# sourceMappingURL=memberAll.css.map */

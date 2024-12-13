@@ -85,7 +85,7 @@ const ChangePassword = ({ setPage }) => {
               required
             />
             <br />
-            <a className="forget" href="/forgetPassword">忘記密碼</a>
+            <a href="/forgetPassword">忘記密碼</a>
             <p className="hint">
               &times;1個小寫字母&times;1個大寫字母&times;1個數字&times;最少8個字元
             </p>
